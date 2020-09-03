@@ -1,5 +1,5 @@
-import { User } from './User';
 import moment from 'moment';
+import { User } from './User';
 
 export class Student implements User {
     constructor(
@@ -10,8 +10,30 @@ export class Student implements User {
         public hobbies: string[]
     ) {}
 
+    getId(): string {
+        return this.id
+    }
+
+    getName(): string {
+        return this.name
+    }
+
+    getEmail(): string {
+        return this.email
+    }
+
+    getDateOfBirth(): string {
+        return this.dateOfBirth
+    }
+
+    getHobbies(): string[] {
+        return this.hobbies
+    }
+
     getAge():number {
         const birth = moment(this.dateOfBirth, "DD/MM/YYYY");
         const age = moment().diff(birth, "years")
         return age
     }
+
+}
