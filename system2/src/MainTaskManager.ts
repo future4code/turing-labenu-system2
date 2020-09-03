@@ -31,9 +31,6 @@ export class MainTaskManager {
                 return item.name === student.name
             }
         )
-        
-        console.log("Já existe")
-
         if(duplicateStudent) {
             throw Error("Já existe um estudante com esse nome")
         } else {

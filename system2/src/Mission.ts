@@ -11,7 +11,7 @@ export abstract class Mission {
         private endDate: moment.Moment,
         private teachers: Teacher[] = [],
         private students: Student[] = [],
-        private currentModule?: number = undefined
+        private currentModule?: number | undefined
     ) {}
 
     public getId(): string {

@@ -10,4 +10,4 @@ const mainTaksManager: MainTaskManager = new MainTaskManager();
 
 // mainTaksManager.createStudent(student1);
 // mainTaksManager.createStudent(student2);
-mainTaksManager.getStudents();
+console.log(mainTaksManager.getStudents())
