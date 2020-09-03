@@ -1,0 +1,5 @@
+abstrata com informações básica, nome e id, email, data de nascimento
+
+estudante - nome, id, email, data de nascimento e hobbies
+docente - nome, id, email, data de nascimento e skills
+turma - id, nome, data de início, data de término, lista de professores e lista de alunos, módulo e turno
