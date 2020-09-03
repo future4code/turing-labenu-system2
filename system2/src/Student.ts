@@ -35,5 +35,4 @@ export class Student implements User {
         const age = moment().diff(birth, "years")
         return age
     }
-
-}
+    }
