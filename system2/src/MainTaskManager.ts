@@ -51,7 +51,7 @@ export class MainTaskManager {
         });
 
         this.missions = fileDataMissions.map( (nightMission: NightMission) => {
-            return new FullTimeMission(
+            return new NightMission(
                 nightMission.id,
                 nightMission.startDate,
                 nightMission.endDate,
