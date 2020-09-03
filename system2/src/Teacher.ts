@@ -40,8 +40,6 @@ export class Teacher implements User {
 
 // import {TEACHER_SPECIALTY, Teacher} from './Teacher';
 
-// const teacher: Teacher = new Teacher("1", "Soter", "soter@gmail.com", "22/10/1989", [TEACHER_SPECIALTY.REACT, TEACHER_SPECIALTY.CSS, TEACHER_SPECIALTY.REDUX, TEACHER_SPECIALTY.TESTES])
-
 // console.log(`
 //     Nome: ${teacher.name}
 //     Email: ${teacher.email}

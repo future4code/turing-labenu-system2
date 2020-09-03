@@ -6,12 +6,12 @@ export abstract class Mission {
     private name: string = "";
 
     constructor(
-        private id: string,
-        private startDate: moment.Moment,
-        private endDate: moment.Moment,
-        private teachers: Teacher[] = [],
-        private students: Student[] = [],
-        private currentModule?: number | undefined
+        protected id: string,
+        protected startDate: moment.Moment,
+        protected endDate: moment.Moment,
+        protected teachers: Teacher[] = [],
+        protected students: Student[] = [],
+        protected currentModule?: number | undefined
     ) {}
 
     public getId(): string {
@@ -36,5 +36,9 @@ export abstract class Mission {
 
     public getCurrentModule(): number | undefined {
         return this.currentModule;
+    }
+    
+    public setName(name: string) {
+      this.name = name;
     }
 }
