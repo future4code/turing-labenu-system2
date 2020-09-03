@@ -2,4 +2,8 @@ abstrata com informações básica, nome e id, email, data de nascimento
 
 estudante - nome, id, email, data de nascimento e hobbies
 docente - nome, id, email, data de nascimento e skills
-turma - id, nome, data de início, data de término, lista de professores e lista de alunos, módulo e turno
+turma - id, nome, data de início, data de término, lista de professores e lista de alunos, módulo e turno.
+
+classe abstrata - Mission - name (fora do construtor, por as filhas vão ter exigências diferentes), no construtor: id, startDate, endDate, teachers, students, currentModule? - get, set (name), add(teachers, students)
+classe FullTimeMission
+classe NightMission - têm que terminar com -na-night (setName)
