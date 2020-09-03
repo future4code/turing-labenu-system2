@@ -3,6 +3,7 @@ import { Student } from './Student';
 import { Teacher } from './Teacher';
 import { Mission } from './Mission';
 import { FullTimeMission } from './FullTimeMission';
+import { NightMission } from './NightMission';
 
 export class MainTaskManager {
     private students: Student[] = [];
@@ -37,18 +38,28 @@ export class MainTaskManager {
                 teacher.skills
             )
         });
-        
-        // this.missions = fileDataMissions.map( (mission: FullTimeMission) => {
-        //     return new FullTimeMission(
-        //         mission.id,
-        //         mission.startDate,
-        //         mission.endDate,
-        //         mission.students,
-        //         mission.teachers,
-        //         mission.currentModule,
-        //     )
-        // });
 
+        this.missions = fileDataMissions.map( (fullTimeMission: FullTimeMission) => {
+            return new FullTimeMission(
+                fullTimeMission.id,
+                fullTimeMission.startDate,
+                fullTimeMission.endDate,
+                fullTimeMission.teachers,
+                fullTimeMission.students,
+                fullTimeMission.currentModule,
+            )
+        });
+
+        this.missions = fileDataMissions.map( (nightMission: NightMission) => {
+            return new FullTimeMission(
+                nightMission.id,
+                nightMission.startDate,
+                nightMission.endDate,
+                nightMission.teachers,
+                nightMission.students,
+                nightMission.currentModule,
+            )
+        });
     }
 
     getStudents(): Student[] {
@@ -74,8 +85,18 @@ export class MainTaskManager {
     }
 
     createTeacher(teacher: Teacher): void {
-        this.teachers.push(teacher);
-        this.fileManagerTeachers.writeFile(this.teachers)
+        
+        const duplicateTeachers: Teacher | undefined = this.teachers.find(
+            (item: any) => {
+                return item.name === teacher.name
+            }
+        )
+        if(duplicateTeachers) {
+            throw Error("Já existe um professor com esse nome")
+        } else {
+            this.teachers.push(teacher);
+            this.fileManagerTeachers.writeFile(this.teachers)
+        }
     }
 
     getMissions(): Mission[] {
