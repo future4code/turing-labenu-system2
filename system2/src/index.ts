@@ -15,19 +15,22 @@ const teacher2: Teacher = new Teacher("1", "Mateus", "mateus@gmail.com", "22/10/
 const mainTaksManager: MainTaskManager = new MainTaskManager();
 
 const fullTimeMission: FullTimeMission = new FullTimeMission("1236", Moment("15/02/2020", "DD/MM/YYYY"), Moment("18/11/2020", "DD/MM/YYYY"), [], [], 5);
-fullTimeMission.setName("turma-1")
+fullTimeMission.setName("turma-1");
+
 const nightMission: NightMission = new NightMission("1236", Moment("15/02/2020", "DD/MM/YYYY"), Moment("18/11/2020", "DD/MM/YYYY"), [], [], 5);
 nightMission.setName("turma-1-na-night")
 
-// mainTaksManager.createStudent(student1)
-// mainTaksManager.createStudent(student2)
+mainTaksManager.createStudent(student1)
+mainTaksManager.createStudent(student2)
 
 // mainTaksManager.createTeacher(teacher)
 // mainTaksManager.createTeacher(teacher2)
 
-mainTaksManager.createMission(fullTimeMission)
-mainTaksManager.createMission(nightMission)
+// mainTaksManager.createMission(fullTimeMission)
+// mainTaksManager.createMission(nightMission)
 
 // console.log(mainTaksManager.getStudents())
 // console.log(mainTaksManager.getTeachers())
-console.log(mainTaksManager.getMissions())
+// console.log(mainTaksManager.getMissions())
+
+mainTaksManager.prinStudents();
