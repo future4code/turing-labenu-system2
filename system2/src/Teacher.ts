@@ -1,3 +1,4 @@
+import moment from 'moment';
 import {User} from "./User";
 
 export enum TEACHER_SPECIALTY {
@@ -34,15 +35,14 @@ export class Teacher implements User {
     public getDateOfBirth(): string {
         return this.id;
     }
+
+    getAge():number {
+        const birth = moment(this.dateOfBirth, "DD/MM/YYYY");
+        const age = moment().diff(birth, "years")
+        return age
+    }
+
+    getSkills(): TEACHER_SPECIALTY[] {
+        return this.skills;
+    }
 }
-
-//Codigo para implementar no index
-
-// import {TEACHER_SPECIALTY, Teacher} from './Teacher';
-
-// console.log(`
-//     Nome: ${teacher.name}
-//     Email: ${teacher.email}
-//     Data de nascimento: ${teacher.dateOfBirth}
-//     Especialidades: ${teacher.skills}
-// `)
