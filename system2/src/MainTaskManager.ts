@@ -1,6 +1,6 @@
 import { JSONFileManager } from './JSONFileManager';
 import { Student } from './Student';
-import { Teacher } from './Teacher';
+import { Teacher, TEACHER_SPECIALTY } from './Teacher';
 import { Mission } from './Mission';
 import { FullTimeMission } from './FullTimeMission';
 import { NightMission } from './NightMission';
@@ -11,8 +11,8 @@ export class MainTaskManager {
     private missions: Mission[] = [];
 
     private fileManager: JSONFileManager = new JSONFileManager("./students.txt");
-    private fileManagerTeachers: JSONFileManager = new JSONFileManager("./teachers.json");
-    private fileManagerMissions: JSONFileManager = new JSONFileManager("./missions.json");
+    private fileManagerTeachers: JSONFileManager = new JSONFileManager("./teachers.txt");
+    private fileManagerMissions: JSONFileManager = new JSONFileManager("./missions.txt");
 
     constructor() {
         const fileData: any = this.fileManager.readFile();
@@ -66,7 +66,7 @@ export class MainTaskManager {
         return this.students
     }
 
-    prinStudents(): void {
+    printStudents(): void {
         this.students.map(
             (student) => {
                 console.log(`{
@@ -78,6 +78,19 @@ export class MainTaskManager {
             }
         )
         
+    }
+
+    printTeachers(): void {
+        this.teachers.map(
+            (teacher) => {
+                console.log(`{
+                    Nome: ${teacher.getName()},
+                    Email: ${teacher.getEmail()},
+                    Idade: ${teacher.getAge()},
+                    Especialidades: ${teacher.getSkills()} 
+                }`)
+            }
+        )
     }
 
     createStudent(student: Student): void {
