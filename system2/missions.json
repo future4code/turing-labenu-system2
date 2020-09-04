@@ -6,6 +6,24 @@
       "teachers": [],
       "students": [],
       "currentModule": 5,
+      "name": ""
+   },
+   {
+      "id": "1236",
+      "startDate": "2020-02-15T03:00:00.000Z",
+      "endDate": "2020-11-18T03:00:00.000Z",
+      "teachers": [],
+      "students": [],
+      "currentModule": 5,
+      "name": ""
+   },
+   {
+      "id": "1236",
+      "startDate": "2020-02-15T03:00:00.000Z",
+      "endDate": "2020-11-18T03:00:00.000Z",
+      "teachers": [],
+      "students": [],
+      "currentModule": 5,
       "name": "turma-1"
    },
    {

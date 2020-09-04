@@ -22,53 +22,5 @@
          "REDUX",
          "TESTES"
       ]
-   },
-   {
-      "id": "1",
-      "name": "Soter",
-      "email": "soter@gmail.com",
-      "dateOfBirth": "22/10/1989",
-      "skills": [
-         "REACT",
-         "CSS",
-         "REDUX",
-         "TESTES"
-      ]
-   },
-   {
-      "id": "1",
-      "name": "Mateus",
-      "email": "mateus@gmail.com",
-      "dateOfBirth": "22/10/1989",
-      "skills": [
-         "REACT",
-         "CSS",
-         "REDUX",
-         "TESTES"
-      ]
-   },
-   {
-      "id": "1",
-      "name": "Soter",
-      "email": "soter@gmail.com",
-      "dateOfBirth": "22/10/1989",
-      "skills": [
-         "REACT",
-         "CSS",
-         "REDUX",
-         "TESTES"
-      ]
-   },
-   {
-      "id": "1",
-      "name": "Mateus",
-      "email": "mateus@gmail.com",
-      "dateOfBirth": "22/10/1989",
-      "skills": [
-         "REACT",
-         "CSS",
-         "REDUX",
-         "TESTES"
-      ]
    }
 ]
