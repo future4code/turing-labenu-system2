@@ -1,0 +1,24 @@
+[
+   {
+      "id": "1234",
+      "name": "Carlota Joaquina",
+      "email": "carlota-florzinha@gmail.com",
+      "dateOfBirth": "15/02/1994",
+      "hobbies": [
+         "desenhar",
+         "cantar",
+         "jogar xadrez"
+      ]
+   },
+   {
+      "id": "1235",
+      "name": "Cirilo",
+      "email": "cirilo@gmail.com",
+      "dateOfBirth": "15/02/1994",
+      "hobbies": [
+         "Carlotinha",
+         "games",
+         "assistir séries de ficção"
+      ]
+   }
+]

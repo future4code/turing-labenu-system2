@@ -10,7 +10,7 @@ export class MainTaskManager {
     private teachers: Teacher[] = [];
     private missions: Mission[] = [];
 
-    private fileManager: JSONFileManager = new JSONFileManager("./students.json");
+    private fileManager: JSONFileManager = new JSONFileManager("./students.txt");
     private fileManagerTeachers: JSONFileManager = new JSONFileManager("./teachers.json");
     private fileManagerMissions: JSONFileManager = new JSONFileManager("./missions.json");
 
@@ -64,6 +64,20 @@ export class MainTaskManager {
 
     getStudents(): Student[] {
         return this.students
+    }
+
+    prinStudents(): void {
+        this.students.map(
+            (student) => {
+                console.log(`{
+                    Nome: ${student.getName()},
+                    Email: ${student.getEmail()},
+                    Idade: ${student.getAge()},
+                    Especialidades: ${student.getHobbies()} 
+                }`)
+            }
+        )
+        
     }
 
     createStudent(student: Student): void {
